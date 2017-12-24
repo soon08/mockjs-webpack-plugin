@@ -1,4 +1,5 @@
 # MockjsWebpackPlugin
+[readme EN](./readme.md)
 
 > 基于 [mockjs](https://github.com/nuysoft/Mock) 的 mock webpack 插件
 

@@ -1,4 +1,5 @@
 # MockjsWebpackPlugin
+[中文readme](./readme-zh.md)
 
 > A mockjs webpack plugin based on [mockjs](https://github.com/nuysoft/Mock)
 

@@ -4,13 +4,17 @@
   "description": "A mockjs webpack plugin",
   "main": "dist/index.js",
   "author": "Soon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soon08/mockjs-webpack-plugin.git"
+  },
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
     "mockjs-lite": "^0.3.2",
     "node-walkdir": "^0.1.0"
   },
-  "repository": "https://github.com/soon08/mockjs-webpack-plugin.git",
+
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && gulp"

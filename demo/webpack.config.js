@@ -1,6 +1,6 @@
 const path = require('path');
 
-const MockjsWebpackPlugin = require('../dist/index');
+const MockjsWebpackPlugin = require("mockjs-webpack-plugin");
 
 module.exports = {
   entry: './index.js',
