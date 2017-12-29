@@ -32,8 +32,8 @@ npm install --save-dev webpack mockjs-webpack-plugin
     ├── config
     ├── src
     ├── mock    //mock数据目录
-    ⎪   ├── data.js
-    ⎪   ├── data.json
+    |   ├── data.js
+    |   ├── data.json
         ...
 ```
 
@@ -192,7 +192,7 @@ module.exports = function(req) {
 
 _以上mock数据的语法均来自 `mockjs`，想获取更多语法可以参阅mockjs官网文档和示例_
 
-mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)
+ mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)
 
 ## Mock JSON
 * [Mock.js 0.1 官方文档](https://github.com/nuysoft/Mock/wiki)
