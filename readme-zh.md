@@ -5,7 +5,7 @@
 
 # 这个插件解决的问题
 
-参考了[MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs) 两个工具。
+参考了[MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs) 两个工具。
 
 `MarxJiao/mock-webpack-plugin` 作为webpack插件集成方便
 
@@ -55,7 +55,7 @@ module.exports = {
     new MockjsWebpackPlugin({
       // mock数据的存放路径
       path: path.join(__dirname, "./mock"),
-      // 配置mock服务的端口，避免与应用端口冲突
+      // 配置mock服务的端口，避免与应用端口冲突
       port: 3000
     })
   ],
@@ -64,14 +64,14 @@ module.exports = {
     // 应用端口，避免与mock服务端口冲突
     port: 5001,
     proxy: {
-      // 配置匹配服务的url规则，以及其代理的服务地址，即mock服务的地址
+      // 配置匹配服务的url规则，以及其代理的服务地址，即mock服务的地址
       "/": "http://localhost:3000/"
     }
   }
 };
 ```
 
-_增加 mock 数据时，在 mock 中新建文件即可，webpack 配置  无需更新，**但是需要重新启动应用**_
+_增加 mock 数据时，在 mock 中新建文件即可，webpack 配置无需更新，**但是需要重新启动应用**_
 
 # 参数
 
@@ -116,7 +116,7 @@ new MockjsWebpackPlugin(options);
 对应的文件内容可以这样理解
 
 * 文件标题： `Json data file`
-* 访问路径： `/json/data`
+* 访问路径： `/json/data`
 * 描述：
 ```
 Here you can write a detailed description
@@ -190,9 +190,9 @@ module.exports = function(req) {
 };
 ```
 
-_以上mock数据的语法均来自 `mockjs`，想获取更多语法可以参阅mockjs官网文档和示例_
+_以上mock数据的语法均来自 `mockjs`，想获取更多语法可以参阅mockjs官网文档和示例_
 
- mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)
+mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)
 
 ## Mock JSON
 * [Mock.js 0.1 官方文档](https://github.com/nuysoft/Mock/wiki)
