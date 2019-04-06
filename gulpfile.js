@@ -1,14 +1,20 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
-
-gulp.task('default', () => {
+const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
+const es2015Preset = require("babel-preset-es2015");
+/**
+ * 压缩js 将 ./src/js 所有的js文件进行压缩
+ * 输出 ./dist/js
+ */
+gulp.task("default", () => {
     gulp
         .src('src/*.html')
         .pipe(gulp.dest('dist'));
 
-    return gulp.src('src/*.js')
+    gulp.src("./src/*.js")
         .pipe(babel({
-            presets: ['es2017']
+            presets: [es2015Preset]
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(uglify())
+        .pipe(gulp.dest("dist"));
 });

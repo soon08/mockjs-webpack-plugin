@@ -1,6 +1,6 @@
 const path = require('path');
 
-const MockjsWebpackPlugin = require("mockjs-webpack-plugin");
+const MockjsWebpackPlugin = require("../dist/index");
 
 module.exports = {
   entry: './index.js',
@@ -10,14 +10,19 @@ module.exports = {
   },
   plugins: [
     new MockjsWebpackPlugin({
-        path: path.join(__dirname, './mock'),
-        port: 3000
+      path: path.join(__dirname, './mock'),
+      port: 3000
     })
   ],
   devServer: {
     port: 5001,
     proxy: {
-      '/': 'http://localhost:3000/'
+      '/api': {
+        target: 'http://localhost:3000/',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
     }
   }
 };

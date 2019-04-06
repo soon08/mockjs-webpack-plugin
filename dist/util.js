@@ -1,0 +1,1 @@
+"use strict";var fs=require("fs");function cleanCache(a){require.cache[a]=null}function walk(e){var r=[];return fs.readdirSync(e).forEach(function(a){a=e+"/"+a;var c=fs.statSync(a);c&&c.isDirectory()?r=r.concat(walk(a)):r.push(a)}),r}function isJavacriptFile(a){return/\.js$/.test(a)}module.exports={cleanCache:cleanCache,walk:walk,isJavacriptFile:isJavacriptFile};

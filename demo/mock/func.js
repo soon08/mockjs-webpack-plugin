@@ -23,7 +23,7 @@ module.exports = function(req) {
     code: 0,
     data: {
       uid: +uid,
-      name: "@name",
+      name: "@name----",
       "age|20-30": 1,
       email: "@email",
       date: "@date"
