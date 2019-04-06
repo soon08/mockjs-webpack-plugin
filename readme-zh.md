@@ -198,6 +198,10 @@ mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.c
 * [Mock.js 0.1 官方文档](https://github.com/nuysoft/Mock/wiki)
 * [Mock 示例](http://mockjs-lite.js.org/docs/examples.html)
 
+#ChangeLog
+version 2.0.0 -- 2019.04.06
+1. 增加数据文件更新热加载，如增加／删除，修改文件内容等。
+
 # 支持
 此插件来源于 [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)。
 

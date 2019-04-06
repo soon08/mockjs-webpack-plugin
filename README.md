@@ -195,6 +195,10 @@ mock data desciption comes from [52cik/express-mockjs](https://github.com/52cik/
 * [Mock.js 0.1 doc](https://github.com/nuysoft/Mock/wiki)
 * [Mock samples](http://mockjs-lite.js.org/docs/examples.html)
 
+#ChangeLog
+version 2.0.0 -- 2019.04.06
+1. support hot reload mock files changes, like add new file or update content.
+
 # Support
 This repo is coming from [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) and [52cik/express-mockjs](https://github.com/52cik/express-mockjs).
 
