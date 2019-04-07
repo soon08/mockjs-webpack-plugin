@@ -71,6 +71,29 @@ module.exports = {
 };
 ```
 
+如果想要给mock服务指定URL前缀，你可以在webpack的proxy设置进行如下配置：
+```javascript
+...
+module.exports = {
+  ...
+  // 配置代理，这里的代理为webpack自带功能
+  devServer: {
+    // 应用端口，避免与mock服务端口冲突
+    port: 5001,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000/',
+        pathRewrite: {
+          // 设置url的重写, 实际过程如下： 
+          // http://localhost:5001/api/getData -> http://localhost:3000/getData
+          '^/api': ''
+        }
+      }
+    }
+  }
+};
+```
+
 _增加 mock 数据时，在 mock 中新建文件即可，webpack 配置无需更新，**但是需要重新启动应用**_
 
 # 参数
@@ -84,7 +107,8 @@ new MockjsWebpackPlugin(options);
 
 # Mock 数据
 
-`Mock 数据` 并非严格的 json 格式数据文件，更像是 js 代码。示例`data.json`如下：
+`Mock 数据` 并非严格的 json 格式数据文件，更像是 js 代码。
+当我们只需要返回直接的数据结构，使用如下的json格式会显得非常直接，示例`data.json`如下：
 
 ```js
 /**
@@ -132,7 +156,7 @@ etc.
 
 接下来我们就可以在浏览器中访问<http://[localhost]:[3000]/json/data> 这个地址获取数据。
 
-除此之外，我们可以直接使用js文件，
+除此之外，我们可以直接使用js文件，当我们需要校验入参时，这会很实用。
 
 ``` js
 /**

@@ -11,7 +11,6 @@ function parseAPIs(dir) {
 
     var files = walk(dir);
 
-    // walkdir(dir, /\.js(on)?$/i, function (filepath) {
     (files || []).forEach(filepath => {
         var content = String(fs.readFileSync(filepath, "utf8")).trim() || "{}";
 

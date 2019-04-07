@@ -68,6 +68,29 @@ module.exports = {
 };
 ```
 
+if you want to set a special url for mock service, you can use webpack proxy like this:
+```javascript
+...
+module.exports = {
+  ...
+  // config proxy
+  devServer: {
+    // application port
+    port: 5001,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000/',
+        pathRewrite: {
+          // set url rewrite, for example, 
+          // http://localhost:5001/api/getData -> http://localhost:3000/getData
+          '^/api': ''
+        }
+      }
+    }
+  }
+};
+```
+
 _When you add a mock data file, do not need to modify the webpack config file but **restart the application**_
 
 # OPTIONS
@@ -81,7 +104,8 @@ new MockjsWebpackPlugin(options);
 
 # Mock Data
 
-`Mock Data` here is not a real JSON file, and more like a JS file, so you want to use the following format.
+`Mock Data` here is not a real JSON file, and more like a JS file.
+When we just want to return data without any processing, a json mock file will be proper. So you want to use the following format.
 
 ```js
 /**
@@ -129,7 +153,7 @@ etc.
 
 Then you can access the <http://[localhost]:[3000]/json/data> through the browser.
 
-Of course, you can also use the JS file directly,
+In addition, we can use the JS file directly, which is very useful when we need to check the input parameters.
 
 ``` js
 /**

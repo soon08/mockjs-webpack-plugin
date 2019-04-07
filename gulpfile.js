@@ -4,7 +4,7 @@ const babel = require("gulp-babel");
 const es2015Preset = require("babel-preset-es2015");
 /**
  * 压缩js 将 ./src/js 所有的js文件进行压缩
- * 输出 ./dist/js
+ * 输出 ./dist
  */
 gulp.task("default", () => {
     gulp

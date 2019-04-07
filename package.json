@@ -8,11 +8,16 @@
     "type": "git",
     "url": "https://github.com/soon08/mockjs-webpack-plugin.git"
   },
+  "keywords": [
+    "mock",
+    "mockjs",
+    "webpack",
+    "webpack plugin"
+  ],
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
     "mockjs": "^1.0.1-beta3",
-    "node-walkdir": "^0.1.0",
     "watch": "^1.0.2"
   },
   "scripts": {
