@@ -1,17 +1,11 @@
 # MockjsWebpackPlugin
 [readme EN](./readme.md)
 
-> 基于 [mockjs](https://github.com/nuysoft/Mock) 的 mock webpack 插件
+> 快速搭建项目 mock 服务的 webpack 插件，基于 [mockjs](https://github.com/nuysoft/Mock) 
 
 # 这个插件解决的问题
 
-参考了[MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs) 两个工具。
-
-`MarxJiao/mock-webpack-plugin` 作为webpack插件集成方便
-
-`52cik/express-mockjs` 集成mockjs语法可以满足丰富多样的mock数据结构，但是集成麻烦
-
-因此做了这个插件，基于`52cik/express-mockjs`丰富多样的mock服务，做成webpack插件使用。
+通过 webpack 插件的方式，快速搭建项目的 mock 服务，用于前后端分离模式下的并行开发。
 
 # 使用
 
@@ -223,10 +217,12 @@ mock数据说明文档和功能来源于 [52cik/express-mockjs](https://github.c
 * [Mock 示例](http://mockjs-lite.js.org/docs/examples.html)
 
 #ChangeLog
+version 3.0.0 -- 2019.04.07
+1. 什么都没有更新! 被npmjs的命令 `npm version <update_type>` 悄咪咪升级到3.0.0了
 version 2.0.0 -- 2019.04.06
 1. 增加数据文件更新热加载，如增加／删除，修改文件内容等。
 
 # 支持
-此插件来源于 [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)。
+此插件灵感来源于 [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) 和 [52cik/express-mockjs](https://github.com/52cik/express-mockjs)。
 
 感谢两位作者 [Marx(MarxJiao)](https://github.com/MarxJiao) 和 [楼教主(52cik)](https://github.com/52cik)。

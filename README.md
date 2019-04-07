@@ -1,16 +1,11 @@
 # MockjsWebpackPlugin
 [中文readme](./readme-zh.md)
 
-> A mockjs webpack plugin based on [mockjs](https://github.com/nuysoft/Mock)
+> Quickly build mock service for your project as a webpack plugin based on [mockjs](https://github.com/nuysoft/Mock)
 
 # What is the problem this plugin solved
 
-By using this two tools, [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) and [52cik/express-mockjs](https://github.com/52cik/express-mockjs).
-
-I found that `MarxJiao/mock-webpack-plugin` is very conveniently to integrating as a webpack plugin.
-And `52cik/express-mockjs` based on mockjs syntax satisfies a variety of mock data structures, but integrating is troublesome.
-
-So i combine this two repo to a new one as a webpack plugin.
+Through the way of webpack plugin, we can quickly build a mock service of project for parallel development in front-end and back-end separation mode.
 
 # Start up
 
@@ -220,8 +215,11 @@ mock data desciption comes from [52cik/express-mockjs](https://github.com/52cik/
 * [Mock samples](http://mockjs-lite.js.org/docs/examples.html)
 
 #ChangeLog
+version 3.0.0 -- 2019.04.07
+1. nothing updated! Just use `npm version <update_type>` and then i find my package.json has been updated to 3.0.0
 version 2.0.0 -- 2019.04.06
 1. support hot reload mock files changes, like add new file or update content.
+
 
 # Support
 This repo is coming from [MarxJiao/mock-webpack-plugin](.https://github.com/MarxJiao/mock-webpack-plugin) and [52cik/express-mockjs](https://github.com/52cik/express-mockjs).
