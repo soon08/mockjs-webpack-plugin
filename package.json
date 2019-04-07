@@ -1,6 +1,6 @@
 {
   "name": "mockjs-webpack-plugin",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A mockjs webpack plugin",
   "main": "dist/index.js",
   "author": "Soon",
